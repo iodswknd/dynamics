@@ -207,9 +207,9 @@ p {
                              "s s";
         width: 100%;
         column-gap:0;
-        row-gap: .5rem;
+        row-gap: .2rem;
         align-items: center;
-        height: 2.75rem;
+        height: 5.5rem;
         max-width: 1280px;
     }
     #label1 {
