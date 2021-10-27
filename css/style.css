@@ -193,12 +193,39 @@ p {
 
 .slider-container{
     display: inline-grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "a b b b c";
     width: 100%;
     column-gap: 2rem;
     align-items: center;
     height: 2.75rem;
-    max-width: 800px;
+    max-width: 1280px;
+}
+
+@media screen only and (max-device-height:1280px) {
+    .slider-container{
+        grid-template-areas: "a c"
+                             "b b";
+        width: 100%;
+        column-gap:0;
+        row-gap: .5rem;
+        align-items: center;
+        height: 2.75rem;
+        max-width: 1280px;
+    }
+}
+
+#label1 {
+    grid-area: a;
+    text-align:left !important;
+}
+
+#slider {
+    grid-area: b;
+}
+
+#label2 {
+    grid-area: c;
+    text-align:right !important;
 }
 
 .check-item {
