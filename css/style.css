@@ -219,6 +219,9 @@ p {
     #label2 {
         text-align:right !important;
     }
+    .slider-box {
+        height: 100%;
+    }
 }
 
 #label1 {
