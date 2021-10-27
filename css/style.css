@@ -120,7 +120,7 @@ p {
     column-gap: 2rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-device-width: 1280px) {
     .grid-3-column  {
         grid-template-areas: "c c"
                              "a b";
@@ -129,7 +129,7 @@ p {
     }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-device-width: 800px) {
     .grid-3-column  {
         grid-template-areas: "c"
                              "a"
@@ -144,14 +144,14 @@ p {
     column-gap: 2rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-device-width: 1280px) {
     .grid-4-column  {
         grid-template-columns: 1fr 1fr;
         row-gap: 2rem;
     }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-device-width: 800px) {
     .grid-4-column  {
         grid-template-columns: 1fr;
         row-gap: 2rem;
@@ -163,7 +163,7 @@ p {
     column-gap: 2rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-device-width: 1280px) {
     .grid-2-column  {
         grid-template-columns: 1fr;
         row-gap: 2rem;
@@ -220,7 +220,7 @@ p {
     width: 100%;
 }
 
-@media screen and (min-width: 680px) and (max-width:1000px) {
+@media screen and (min-device-width: 800px) and (max-device-width:1280px) {
   .topic-check {
     grid-template-columns: 1fr 1fr;
   }
