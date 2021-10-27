@@ -204,6 +204,7 @@ p {
 @media screen and (max-height:1280px) {
     .slider-container{
         grid-template-areas: "l r"
+                             "s s"
                              "s s";
         width: 100%;
         column-gap:0;
