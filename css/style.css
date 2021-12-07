@@ -365,7 +365,7 @@ span.cb {
   cursor: pointer;
 }
 
-#screenshot1Img{
+#screenshot1Img, #screenshot2Img{
     width: 100% !important;
     height: auto !important;
 }

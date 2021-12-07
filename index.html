@@ -195,7 +195,8 @@
         </div>
       </div>
     </div>
-
+  </div>
+  <div id="page2">
     <div id="info2" class="grid-container grid-2-column no-row-gap">
       <div class="grid-item slider-container">
         <span id="label1" class="text-right">little spoon</span>
@@ -281,7 +282,12 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <div id="screenshot1">
+        <h3>Part 1</h3>
         <img src="" id="screenshot1Img">
+      </div>
+      <div id="screenshot2">
+        <h3>Part 2</h3>
+        <img src="" id="screenshot2Img">
       </div>
     </div>
 
@@ -342,6 +348,13 @@
         }).then(function(canvas) {
             // $('#screenshot1')[0].appendChild(canvas);
             $("#screenshot1Img").attr("src", canvas.toDataURL("img/png"));
+        });
+        html2canvas($('#page2')[0], {
+          allowTaint: true, 
+          useCORS: true,
+        }).then(function(canvas) {
+            // $('#screenshot1')[0].appendChild(canvas);
+            $("#screenshot2Img").attr("src", canvas.toDataURL("img/png"));
         });
         svgElements.forEach(function(item) {
           item.setAttribute("width", '');
