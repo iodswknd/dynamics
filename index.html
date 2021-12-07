@@ -340,7 +340,6 @@
 
         svgElements.forEach(function(item) {
           item.setAttribute("width", item.width);
-          item.setAttribute("height", item.height);
         });
         html2canvas($('#page1')[0], {
           allowTaint: true, 
@@ -358,7 +357,6 @@
         });
         svgElements.forEach(function(item) {
           item.setAttribute("width", '');
-          item.setAttribute("height", '');
         });
 
         document.head.appendChild(link);
