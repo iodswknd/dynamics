@@ -280,7 +280,9 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <div id="screenshot1"></div>
+      <div id="screenshot1">
+        <img src="" id="screenshot1Img">
+      </div>
     </div>
 
   </div>
@@ -338,7 +340,8 @@
           allowTaint: true, 
           useCORS: true,
         }).then(function(canvas) {
-            $('#screenshot1')[0].appendChild(canvas);
+            // $('#screenshot1')[0].appendChild(canvas);
+            $("#screenshot1Img").attr("src", canvas.toDataURL("img/png"));
         });
         svgElements.forEach(function(item) {
           item.setAttribute("width", '');
@@ -411,21 +414,21 @@
 
     // When the user clicks on the button, open the modal
     btn.onclick = function() {
-    modal.style.display = "block";
     take_screenshot();
+    modal.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
     modal.style.display = "none";
-    $('#screenshot1 canvas')[0].remove();
+    
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
-      $('#screenshot1 canvas')[0].remove();
+      
     }
     }
   </script>

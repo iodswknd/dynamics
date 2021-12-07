@@ -365,7 +365,7 @@ span.cb {
   cursor: pointer;
 }
 
-#screenshot1 canvas{
+#screenshot1Img{
     width: 100% !important;
     height: auto !important;
 }
