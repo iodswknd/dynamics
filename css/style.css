@@ -47,7 +47,7 @@ img {
 	border: 1px solid black;
 	display: inline-block;
 	position: relative;
-    background-image: url(/images/cross.png);
+    background-image: url(.../images/cross.png);
     background-clip: padding-box;
     background-size: 90%;
     overflow: hidden;
@@ -266,7 +266,7 @@ span.cb {
 
 .cb.on#iwa {
     /*content: 'url(images/green-heart.png)';*/
-    background-image: url(/images/green-heart.png);
+    background-image: url(.../images/green-heart.png);
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
