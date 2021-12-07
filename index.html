@@ -1,18 +1,20 @@
 <html>
   <head>
     <title>IwaOiDaiSuga Dynamics</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.86" id="viewport-meta"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/mobile.css" id="mobile">
   </head>
   <body>
+    <div id="page1">
     <h1>get to know my iwaoidaisuga dynamics in...</h1>
     <div id="theboys" class="grid-container grid-4-column">
       <div id="iwaizumi" class="grid-item">
         <h2>Iwaizumi Hajime</h2>
-        <div class="photo"><img draggable="false" src="images/icon_iwaizumi.svg"/></div>
+        <div class="photo"><img draggable="false" src="/images/pfp_iwaizumi.png"/></div>
         <div class="nicknames">
           <label for="oi2iwa">nickname from Oikawa</label>
           <input class="user-input" id="oi2iwa" type="text" value="" name="oi2iwa">
@@ -28,7 +30,7 @@
       </div>
       <div id="oikawa" class="grid-item">
         <h2>Oikawa Tooru</h2>
-        <div class="photo"><img draggable="false" src="images/icon_oikawa.svg"/></div>
+        <div class="photo"><img draggable="false" src="/images/pfp_oikawa.png"/></div>
         <div class="nicknames">
           <label for="iwa2oi">nickname from Iwaizumi</label>
           <input class="user-input" id="iwa2oi" type="text" value="" name="iwa2oi">
@@ -44,7 +46,7 @@
       </div>
       <div id="daichi" class="grid-item">
         <h2>Sawamura Daichi</h2>
-        <div class="photo"><img draggable="false" src="images/icon_daichi.svg"/></div>
+        <div class="photo"><img draggable="false" src="/images/pfp_daichi.png"/></div>
         <div class="nicknames">
           <label for="iwa2dai">nickname from Iwaizumi</label>
           <input class="user-input" id="iwa2dai" type="text" value="" name="iwa2dai">
@@ -60,7 +62,7 @@
       </div>
       <div id="suga" class="grid-item">
         <h2>Sugawara Koushi</h2>
-        <div class="photo"><img draggable="false" src="images/icon_suga.svg"/></div>
+        <div class="photo"><img draggable="false" src="/images/pfp_suga.png"/></div>
         <div class="nicknames">
           <label for="iwa2suga">nickname from Iwaizumi</label>
           <input class="user-input" id="iwa2suga" type="text" value="" name="iwa2suga">
@@ -82,16 +84,16 @@
         <div class="box">
           <div class="dummy"></div>
           <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_iwaizumi.svg"/>
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
           </div>
           <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_oikawa.svg"/>
+            <img draggable="false" src="images/icon_oikawa.png"/>
           </div>
           <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_daichi.svg"/>
+            <img draggable="false" src="images/icon_daichi.png"/>
           </div>
           <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_suga.svg"/>
+            <img draggable="false" src="images/icon_suga.png"/>
           </div>
 
           <!--labels-->
@@ -106,64 +108,64 @@
           <div class="check-item">
             <span>budgets</span>
             <div class="checkbox">
-              <input type="checkbox"><span id="iwa"></span>
-              <input type="checkbox"><span id="oi"></span>
-              <input type="checkbox"><span id="dai"></span>
-              <input type="checkbox"><span id="suga"></span>
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
             </div>
           </div>
           <div class="check-item">
             <span>makes decisions</span>
             <div class="checkbox">
-              <input type="checkbox"><span id="iwa"></span>
-              <input type="checkbox"><span id="oi"></span>
-              <input type="checkbox"><span id="dai"></span>
-              <input type="checkbox"><span id="suga"></span>
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
             </div>
           </div>
           <div class="check-item">
             <span>plans dates</span>
             <div class="checkbox">
-              <input type="checkbox"><span id="iwa"></span>
-              <input type="checkbox"><span id="oi"></span>
-              <input type="checkbox"><span id="dai"></span>
-              <input type="checkbox"><span id="suga"></span>
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
             </div>
           </div>
           <div class="check-item">
             <span>cooks</span>
             <div class="checkbox">
-              <input type="checkbox"><span id="iwa"></span>
-              <input type="checkbox"><span id="oi"></span>
-              <input type="checkbox"><span id="dai"></span>
-              <input type="checkbox"><span id="suga"></span>
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
             </div>
           </div>
           <div class="check-item">
             <span>cleans</span>
             <div class="checkbox">
-              <input type="checkbox"><span id="iwa"></span>
-              <input type="checkbox"><span id="oi"></span>
-              <input type="checkbox"><span id="dai"></span>
-              <input type="checkbox"><span id="suga"></span>
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
             </div>
           </div>
           <div class="check-item">
             <span>first to confess their feelings</span>
             <div class="checkbox">
-              <input type="checkbox"><span id="iwa"></span>
-              <input type="checkbox"><span id="oi"></span>
-              <input type="checkbox"><span id="dai"></span>
-              <input type="checkbox"><span id="suga"></span>
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
             </div>
           </div>
           <div class="check-item">
             <span>first to apologize after a fight</span>
             <div class="checkbox">
-              <input type="checkbox"><span id="iwa"></span>
-              <input type="checkbox"><span id="oi"></span>
-              <input type="checkbox"><span id="dai"></span>
-              <input type="checkbox"><span id="suga"></span>
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
             </div>
           </div>
         </div>
@@ -173,16 +175,16 @@
         <div class="box">
           <div class="dummy"></div>
           <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_iwaizumi.svg"/>
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
           </div>
           <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_oikawa.svg"/>
+            <img draggable="false" src="images/icon_oikawa.png"/>
           </div>
           <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_daichi.svg"/>
+            <img draggable="false" src="images/icon_daichi.png"/>
           </div>
           <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_suga.svg"/>
+            <img draggable="false" src="images/icon_suga.png"/>
           </div>
 
           <!--labels-->
@@ -199,16 +201,16 @@
         <span id="label1" class="text-right">little spoon</span>
         <div id="slider" class="slider-box">
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_iwaizumi.svg"/>
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_oikawa.svg"/>
+            <img draggable="false" src="images/icon_oikawa.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_daichi.svg"/>
+            <img draggable="false" src="images/icon_daichi.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_suga.svg"/>
+            <img draggable="false" src="images/icon_suga.png"/>
           </div>
         </div>
         <span id="label2" class="text-left">big spoon</span>
@@ -217,16 +219,16 @@
         <span id="label1" class="text-right">lends clothes</span>
         <div id="slider" class="slider-box">
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_iwaizumi.svg"/>
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_oikawa.svg"/>
+            <img draggable="false" src="images/icon_oikawa.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_daichi.svg"/>
+            <img draggable="false" src="images/icon_daichi.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_suga.svg"/>
+            <img draggable="false" src="images/icon_suga.png"/>
           </div>
         </div>
         <span id="label2" class="text-left">"borrows" clothes</span>
@@ -235,16 +237,16 @@
         <span id="label1" class="text-right">doesn't use pet names</span>
         <div id="slider" class="slider-box">
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_iwaizumi.svg"/>
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_oikawa.svg"/>
+            <img draggable="false" src="images/icon_oikawa.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_daichi.svg"/>
+            <img draggable="false" src="images/icon_daichi.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_suga.svg"/>
+            <img draggable="false" src="images/icon_suga.png"/>
           </div>
         </div>
         <span id="label2" class="text-left"><em>loves</em> pet names</span>
@@ -253,32 +255,100 @@
         <span id="label1" class="text-right">introverted</span>
         <div id="slider" class="slider-box">
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_iwaizumi.svg"/>
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_oikawa.svg"/>
+            <img draggable="false" src="images/icon_oikawa.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_daichi.svg"/>
+            <img draggable="false" src="images/icon_daichi.png"/>
           </div>
           <div id="draggable" class="slide wrapper">
-            <img draggable="false" src="images/icon_suga.svg"/>
+            <img draggable="false" src="images/icon_suga.png"/>
           </div>
         </div>
         <span id="label2" class="text-left">extroverted</span>
       </div>
     </div>
-  </body>
+  </div>
+  <!-- Trigger/Open The Modal -->
+  <button id="myBtn">Screenshot!</button>
 
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="screenshot1"></div>
+    </div>
+
+  </div>
+  
+  </body>
   <script src="//code.jquery.com/jquery-1.12.4.js"></script>
   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/jquery.ui.touch-punch.min.js"></script>
+  <script src="/js/html2canvas.js"></script>
   <script>
+    // Store the meta element
+    var viewport_meta = document.getElementById('viewport-meta');
+
+    // Define our viewport meta values
+    var viewports = {
+      default: viewport_meta.getAttribute('content'),
+      screenshot: 'width=1200'
+    };
+
+    var viewport_set = function(screenshot) {
+      if ( screenshot ) {
+        viewport_meta.setAttribute( 'content', viewports.screenshot );
+        // document.body.setAttribute('width', "100%");
+      }
+      else {
+        viewport_meta.setAttribute( 'content', viewports.default );
+        // ocument.body.setAttribute('width', '');
+      }
+    }
+    var link = document.createElement('link');
+    link.href = "/css/mobile.css";
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.id = "mobile"
+
     function getRandomInt(lower, upper) {
       var s = Math.floor(Math.random() * lower);
       var e = Math.floor(Math.random() * upper);
       return Math.max(s, e)
     }
+
+
+    var svgElements = document.body.querySelectorAll('img');
+
+    function take_screenshot() {
+        $('#mobile')[0].remove();
+        viewport_set(true);
+        
+
+        svgElements.forEach(function(item) {
+          item.setAttribute("width", item.width);
+          item.setAttribute("height", item.height);
+        });
+        html2canvas($('#page1')[0], {
+          allowTaint: true, 
+          useCORS: true,
+        }).then(function(canvas) {
+            $('#screenshot1')[0].appendChild(canvas);
+        });
+        svgElements.forEach(function(item) {
+          item.setAttribute("width", '');
+          item.setAttribute("height", '');
+        });
+
+        document.head.appendChild(link);
+        viewport_set(false);
+      };
+
     $(document).ready(function(){
 
       $(".free").each(function(){
@@ -310,6 +380,12 @@
           });
       });
 
+
+
+      $('.cb').each(function() {
+        this.addEventListener('click', function(e) {this.classList.toggle('on')});
+      });
+
       //  $( "#resizable" ).resizable({
       //    //animate: true,
       //    alsoResize: "#wrapper",
@@ -322,5 +398,35 @@
       //     }).resizable();
       // });
     });
+  </script>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+    modal.style.display = "block";
+    take_screenshot();
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    $('#screenshot1 canvas')[0].remove();
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      $('#screenshot1 canvas')[0].remove();
+    }
+    }
   </script>
 </html>

@@ -1,15 +1,17 @@
 html {
     font-family: "Lato";
     box-sizing: border-box;
+    width: fit-content;
+    font-size: 16px;
 }
 
 h1,h2,h3,h4,h5,h6 {
 	font-family: "Montserrat";
 }
 
-body {
+#page1 {
     padding: 1.5rem;
-    font-size: 1rem;
+    /*width: 100%;*/
 }
 
 p {
@@ -36,15 +38,21 @@ p {
     margin: auto;
 }
 
+img {
+    width: 100%;
+}
+
 .box {
 	width: 100%;
 	border: 1px solid black;
 	display: inline-block;
 	position: relative;
-    background: #ffffff url(../images/cross.svg) no-repeat center;
+    background-image: url(/images/cross.png);
     background-clip: padding-box;
     background-size: 90%;
     overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .slider-box {
@@ -55,12 +63,11 @@ p {
     border-bottom: 0;
     display: inline-block;
     position: relative;
-    background: linear-gradient(180deg, 
+    background-image: linear-gradient(180deg, 
         rgba(0,0,0,0) calc(50% - 1px), 
         rgba(0,0,0,1) calc(50%), 
         rgba(0,0,0,0) calc(50% + 1px)
     );
-    /*background-image: linear-gradient(to bottom right, #444444, #b1b1b1);*/
 }
 
 .box .dummy {
@@ -72,7 +79,7 @@ p {
     display: table-cell;
     vertical-align: bottom;
     max-width: 30%;
-    padding: .2rem;
+    padding: .2em;
     padding-top: 0;
     background: white;
 }
@@ -120,54 +127,14 @@ p {
     column-gap: 2rem;
 }
 
-@media screen and (max-width: 1280px) {
-    .grid-3-column  {
-        grid-template-areas: "c c"
-                             "a b";
-        grid-template-columns: 1fr 1fr;
-        row-gap: 2rem;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .grid-3-column  {
-        grid-template-areas: "c"
-                             "a"
-                             "b";
-        grid-template-columns: 1fr;
-        row-gap: 2rem;
-    }
-}
-
 .grid-4-column {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 2rem;
 }
 
-@media screen and (max-width: 1280px) {
-    .grid-4-column  {
-        grid-template-columns: 1fr 1fr;
-        row-gap: 2rem;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .grid-4-column  {
-        grid-template-columns: 1fr;
-        row-gap: 2rem;
-    }
-}
-
 .grid-2-column {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
-}
-
-@media screen and (max-width: 1280px) {
-    .grid-2-column  {
-        grid-template-columns: 1fr;
-        row-gap: 2rem;
-    }
 }
 
 .no-row-gap {
@@ -193,35 +160,21 @@ p {
 
 .slider-container{
     display: inline-grid;
-    grid-template-areas: "l s s s r";
+    grid-template-areas: "l r"
+                             "s s"
+                             "s s";
     width: 100%;
     column-gap: 2rem;
     align-items: center;
-    height: 2.75rem;
+    height: 5.5rem;
     max-width: 1280px;
 }
 
-@media screen and (max-height:1280px) {
-    .slider-container{
-        grid-template-areas: "l r"
-                             "s s"
-                             "s s";
-        width: 100%;
-        column-gap:0;
-        row-gap: .2rem;
-        align-items: center;
-        height: 5.5rem;
-        max-width: 1280px;
-    }
-    #label1 {
-        text-align:left !important;
-    }
-    #label2 {
-        text-align:right !important;
-    }
-    .slider-box {
-        height: 100%;
-    }
+#label1 {
+    text-align:left !important;
+}
+#label2 {
+    text-align:right !important;
 }
 
 #label1 {
@@ -255,12 +208,6 @@ p {
     width: 100%;
 }
 
-@media screen and (min-device-width: 800px) and (max-device-width:1280px) {
-  .topic-check {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 /* input styles */
 .nicknames {
     padding: 0 1rem 1rem 0;
@@ -271,13 +218,16 @@ p {
 }
 
 .nicknames input {
-    background: linear-gradient(#000, #000) center bottom 5px /calc(100% - 10px) 2px no-repeat;
     background-color: #fff;
     border: none;
+    border-bottom: 1px solid #1c1c1c;
+    caret-color: transparent;
+    /*border: 0;*/
 }
 
 .nicknames input:focus-visible {
     outline: none;
+    caret-color: black;
 }
 
 /* Checkbox styles */
@@ -291,10 +241,10 @@ p {
 
 .checkbox > span {
     color: #34495E;
-    padding: 0.5rem 0.25rem;
+    /*padding: 0.5rem 0.25rem;*/
 }
 
-.checkbox > input {
+span.cb {
     height: 25px;
     width: 25px;
     -webkit-appearance: none;
@@ -304,58 +254,48 @@ p {
     border: 1px solid #34495E;
     /*border-radius: 4px;*/
     outline: none;
-    transition-duration: 0.3s;
     /*background-color: #41B883;*/
     cursor: pointer;
+    margin-left: .5rem;
   }
 
-.checkbox > input:checked {
+.cb.on {
     /*border: 1px solid #41B883;*/
     /*background-color: #34495E;*/
 }
 
-.checkbox > input:checked + span::before {
-	content: '\2665';
-    display: block;
-    text-align: center;
-    z-index: -1;
-    position: absolute;
-    width: 17px;
-    overflow: visible;
-    top: .35rem;
+.cb.on#iwa {
+    /*content: 'url(images/green-heart.png)';*/
+    background-image: url(/images/green-heart.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.checkbox > input:checked + #iwa::before {
-    /*content: 'url(images/green-heart.svg)';*/
-    content: url(../images/green-heart.svg);
-    left: 0.5rem;
-    color: #5aa566;
+.cb.on#oi {
+    /*content: 'url(images/green-heart.png)';*/
+    background-image: url(../images/blue-heart.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.checkbox > input:checked + #oi::before {
-    /*content: 'url(images/green-heart.svg)';*/
-    content: url(../images/blue-heart.svg);
-    left: 3rem;
-    color: #78d0c5;
+.cb.on#dai{
+    /*content: 'url(images/green-heart.png)';*/
+    background-image: url(../images/red-heart.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.checkbox > input:checked + #dai::before {
-    /*content: 'url(images/green-heart.svg)';*/
-    content: url(../images/red-heart.svg);
-    left: 5.5rem;
-    color: #de7469;
+.cb.on#suga{
+    /*content: 'url(images/green-heart.png)';*/
+    background-image: url(../images/yellow-heart.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.checkbox > input:checked + #suga::before {
-    /*content: 'url(images/green-heart.svg)';*/
-    content: url(../images/yellow-heart.svg);
-    left: 8rem;
-    color: #face64;
-}
-
-.checkbox > input:active {
-    border: 2px solid #34495E;
-}
 
 
 /* test draggable */
@@ -369,8 +309,8 @@ p {
 
 #draggable.slide {
     position: absolute;
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2.5em;
+    width: 2.5em;
     z-index: 99;
     cursor: move;
     top:0;
@@ -383,42 +323,57 @@ p {
     left: 42%;*/
     width: 17%;
 }
-/*.wrapper header{
-  font-size: 23px;
-  font-weight: 500;
-  padding: 17px 30px;
-  border-bottom: 1px solid #ccc;
-}*/
-/*.wrapper header.active{
-  cursor: move;
-  user-select: none;
+
+
+/* modal */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-.wrapper .content{
-  display: flex;
-  padding: 30px 30px 40px 30px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
 }
-.content .icon{
-  height: 95px;
-  width: 95px;
-  border-radius: 50%;
-  border: 5px solid #6F36FF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
-.content .icon i{
-  color: #6F36FF;
-  font-size: 60px;
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
-.content .title{
-  margin: 15px 0;
-  font-size: 29px;
-  font-weight: 500;
+
+#screenshot1 canvas{
+    width: 100% !important;
+    height: auto !important;
 }
-.content p{
-  font-size: 16px;
-  text-align: center;
-}*/
+
+#myBtn {
+    padding: 0.5rem;
+    position: sticky;
+    bottom: 1rem;
+    float: right;
+    margin-right: 1rem;
+}
