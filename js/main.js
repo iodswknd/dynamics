@@ -24,9 +24,8 @@ link.type = "text/css";
 link.id = "mobile"
 
 function getRandomInt(lower, upper) {
-  var s = Math.floor(Math.random() * lower);
-  var e = Math.floor(Math.random() * upper);
-  return Math.max(s, e)
+  var s = lower + Math.floor(Math.random() * (upper-lower));
+  return s
 }
 
 
@@ -65,7 +64,7 @@ function take_screenshot() {
 $(document).ready(function(){
 
   $(".free").each(function(){
-      $(this).css("left", getRandomInt(20,80) + "%").css("top", getRandomInt(20,80) + "%");
+      $(this).css("left", getRandomInt(35,50) + "%").css("top", getRandomInt(35,50) + "%");
       // Test if the div element is empty
       $(this).draggable({
         containment: 'parent',
@@ -79,7 +78,7 @@ $(document).ready(function(){
   });
 
   $(".slide").each(function(){
-      $(this).css("left", getRandomInt(20,80) + "%")
+      $(this).css("left", getRandomInt(45,50) + "%")
       // Test if the div element is empty
       $(this).draggable({
         axis: 'x',
