@@ -443,7 +443,7 @@ span.cb {
 
 .footer h2::after {
     /*right: 200px;*/
-    top: calc(-1.5rem + 2px);
+    top: calc(-1.5rem - 4px);
 }
 
 h2 small {
