@@ -43,16 +43,17 @@ var spreadSheet = (spreadSheet) || function(key, fields, success) {
 	    var table = obj.table;
         fields = (fields.length > 0) ? fields : generateFields(table);
 	    const rows = table.rows.map(({c}) => c.map(e => e ? (e.v || "") : "")); // Modified from const rows = table.rows.map(({c}) => c.map(({v}) => v));
-        
+        // console.log(rows);
         // console.log(fields);
         for (var i = 0; i < rows.length; i++) {
             var entry = {};
             var row = rows[i]
+            // console.log(row);
             for (var j = 0; j < fields.length; j++) {
                 var field = fields[j];
-                obj[field] = row[j];
+                entry[field] = row[j];
             }
-            data.push(obj);
+            data.push(entry);
         }
         dataReady = true;
         success(retValue);

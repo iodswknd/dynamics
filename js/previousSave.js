@@ -146,7 +146,7 @@ function setSliders(data, columns) {
 function setData(ID) {
 	var data = {};
 	if (!(ID in savedData)) {
-		throw "ERROR: ID not in savedData"
+		throw "ERROR: ID not in savedData";
 	} else {
 		data = savedData[ID];
 		inputs = columns.slice(0,4);
@@ -181,7 +181,9 @@ function saveData() {
 	saveBoxes(boxes);
 	saveSliders(sliders);
 
-	formIDs.slice(1).forEach( id => (form[id] = form[id].join(';')))
+	savedData[dataID] = form;
+
+	formIDs.slice(1).forEach( id => (form[id] = form[id].join(';')));
 	// console.log(form);
 
 	form[formIDs[0]] = dataID;
@@ -215,4 +217,7 @@ function saveData() {
 	      });
 	    }
 	}, 300);
+
+	$('#saveLink').text('iodswknd.github.io/dynamics/?data=' + dataID);
+	$('#saveLink').attr('href', 'https://'+$('#saveLink').text());
 }

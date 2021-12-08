@@ -123,6 +123,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
+	saveData();
     take_screenshot();
     modal.style.display = "block";
 }
