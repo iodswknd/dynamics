@@ -79,7 +79,7 @@ img {
 
 .slider-line {
     background: #000;
-    height: 1.3px;
+    height: 1px;
     width: 100%;
     display: inherit;
     margin-top: .8rem;
@@ -443,7 +443,7 @@ span.cb {
 
 .footer h2::after {
     /*right: 200px;*/
-    top: -1.5rem;
+    top: calc(-1.5rem + 2px);
 }
 
 h2 small {
