@@ -82,7 +82,7 @@ img {
     height: 1.3px;
     width: 100%;
     display: inherit;
-    margin-top: 1rem;
+    margin-top: .8rem;
 }
 
 .box .dummy {
@@ -210,7 +210,7 @@ img {
     width: 100%;
     column-gap: 1.2rem;
     align-items: center;
-    height: 2.75rem;
+    margin: .6rem 0;
 }
 
 .check-item > span {
@@ -235,8 +235,9 @@ img {
 .nicknames input {
     background-color: #fff;
     border: none;
+    border-radius: 0;
     border-bottom: 1px solid #1c1c1c;
-    caret-color: transparent;
+    /*caret-color: transparent;*/
     /*border: 0;*/
 }
 
@@ -386,10 +387,82 @@ span.cb {
 }
 
 #myBtn {
-    padding: 0.5rem;
+    padding: 1rem;
     position: sticky;
     bottom: 1rem;
     float: right;
     margin-right: 1rem;
     z-index: 99;
+    width: 30px;
+    height: 30px;
+    background: #82d8c7 url(../images/screenshot.png) no-repeat center;
+    background-size: 70%;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all ease .5s;
+}
+
+#myBtn:hover {
+    background-color: #1c1c1c;
+}
+
+.header h2 {
+    margin-bottom: 3rem;
+}
+
+.footer h2 {
+    text-align: right;
+    margin-top: 3rem;
+}
+
+.header h2 mark {
+    background: #fefefe;
+    padding-right: .8rem;
+}
+
+.footer h2 mark {
+    background: #fefefe;
+    padding-left: .8rem;
+    font-style: italic;
+}
+
+.header h2::after, .footer h2::after {
+    content: "";
+    display: block;
+    width: calc(100% - 200px);
+    height: 2px;
+    background: #1c1c1c;
+    position: relative;
+    z-index: -2;
+}
+
+.header h2::after {
+    left: 200px;
+    top: -0.7rem;
+}
+
+.footer h2::after {
+    /*right: 200px;*/
+    top: -1.5rem;
+}
+
+h2 small {
+    font-size: small;
+}
+
+
+.color-green {
+    color: #61b069;
+}
+
+.color-blue {
+    color: #82d8c7;
+}
+
+.color-red {
+    color: #d66868;
+}
+
+.color-yellow {
+    color: #f7cf64;
 }

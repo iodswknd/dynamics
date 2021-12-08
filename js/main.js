@@ -4,7 +4,7 @@ var viewport_meta = document.getElementById('viewport-meta');
 // Define our viewport meta values
 var viewports = {
   default: viewport_meta.getAttribute('content'),
-  screenshot: 'width=1200'
+  screenshot: 'width=1200, initial-scale=1.0'
 };
 
 var viewport_set = function(screenshot) {
