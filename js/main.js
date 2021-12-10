@@ -4,7 +4,7 @@ var viewport_meta = document.getElementById('viewport-meta');
 // Define our viewport meta values
 var viewports = {
   default: viewport_meta.getAttribute('content'),
-  screenshot: 'width=1400'
+  screenshot: 'width=1400,initial-scale=1.0,maximum-scale=1.0'
 };
 
 var viewport_set = function(screenshot) {
@@ -41,10 +41,9 @@ function take_screenshot() {
     });
     html2canvas($('#page1')[0], {
       allowTaint: true, 
-      useCORS: true,
     }).then(function(canvas) {
-        // $('#screenshot1')[0].appendChild(canvas);
-        $("#screenshot1Img").attr("src", canvas.toDataURL("img/png"));
+        $('#screenshot1')[0].appendChild(canvas);
+        $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
     });
     // html2canvas($('#page2')[0], {
     //   allowTaint: true, 
