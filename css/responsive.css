@@ -1,5 +1,6 @@
 html {
     padding: 2rem 3rem;
+    margin: 0;
 }
 
 .screenshot-only {
@@ -17,6 +18,10 @@ html {
 
 
 @media screen and (max-width: 1280px) {
+    html {
+        font-size: 13px;
+    }
+
     .grid-3-column  {
         grid-template-areas: "c c"
                              "a b";
