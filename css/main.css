@@ -72,8 +72,6 @@ mark {
 	font-size: 1.3rem;
 	text-align: center;
 	text-transform: lowercase;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-position: 1em;
     margin-top: 0.3em;
     background-color: transparent !important;
@@ -87,20 +85,28 @@ mark {
 	background-color: transparent !important;
 }
 
-#icon_iwa {
+#icon_iwa, .icon_iwa {
 	background-image: url(../images/icon_iwaizumi.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-#icon_oi {
+#icon_oi, .icon_oi {
 	background-image: url(../images/icon_oikawa.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-#icon_dai {
+#icon_dai, .icon_dai {
 	background-image: url(../images/icon_daichi.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-#icon_sug {
+#icon_sug, .icon_suga {
 	background-image: url(../images/icon_suga.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .photo {
@@ -410,6 +416,7 @@ span.cb {
     /*top: 42%;
     left: 42%;*/
     width: 17%;
+    padding-bottom:17%;
 }
 
 .footer {
