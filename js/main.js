@@ -105,7 +105,7 @@ $(document).ready(function(){
   if (idIndex > -1) {
   	var id = href.slice(idIndex+6);
   	// console.log(id);
-  	setID(id);
+  	// setID(id);
   }
 
 });
@@ -122,7 +122,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
-	saveData();
+	// saveData();
     take_screenshot();
     modal.style.display = "block";
 }
