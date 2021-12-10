@@ -1,5 +1,5 @@
 html {
-    max-width: 100vw;
+    padding: 2rem 3rem;
 }
 
 .screenshot-only {
@@ -8,14 +8,7 @@ html {
 
 .page {
     max-height: initial;
-}
-
-#page1 {
-    padding-bottom: 0;
-}
-
-#page2 {
-    padding-top: 0;
+    padding: 0;
 }
 
 .user-input {
