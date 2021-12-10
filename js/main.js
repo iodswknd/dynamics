@@ -21,7 +21,7 @@ var link = document.createElement('link');
 link.href = "css/responsive.css";
 link.rel = "stylesheet";
 link.type = "text/css";
-link.id = "mobile"
+link.id = "responsive"
 
 function getRandomInt(lower, upper) {
   var s = lower + Math.floor(Math.random() * (upper-lower));
@@ -32,20 +32,51 @@ function getRandomInt(lower, upper) {
 var svgElements = document.body.querySelectorAll('img');
 
 function take_screenshot() {
-    $('#mobile')[0].remove();
+    $('#responsive')[0].remove();
     viewport_set(true);
     
 
     svgElements.forEach(function(item) {
       item.setAttribute("width", item.width);
     });
-    html2canvas($('#page1')[0], {
+	try {
+    	html2canvas($('#page1')[0], {
+	      allowTaint: true, 
+	      useCORS: true,
+	    }).then(function(canvas) {
+	        // $('#screenshot1')[0].appendChild(canvas);
+	        $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
+	    });
+    } catch (error) {
+    	console.log(error);
+    	try {
+    		html2canvas($('#page1')[0], {
+		      allowTaint: true, 
+		      useCORS: true,
+		      scale: window.devicePixelRatio - 1
+		    }).then(function(canvas) {
+		        // $('#screenshot1')[0].appendChild(canvas);
+		        $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
+		    });
+    	} catch (error) {
+    		console.log(error);
+    		html2canvas($('#page1')[0], {
+			      allowTaint: true, 
+			      useCORS: true,
+			      scale: 1,
+			    }).then(function(canvas) {
+			        // $('#screenshot1')[0].appendChild(canvas);
+			        $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
+			    });
+    	}
+    }
+    
+    html2canvas($('#page2')[0], {
       allowTaint: true, 
-      scale: 1,
-      useCORS: true
+      useCORS: true,
     }).then(function(canvas) {
         // $('#screenshot1')[0].appendChild(canvas);
-        $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
+        $("#screenshot2Img").attr("src", canvas.toDataURL("img/jpeg"));
     });
     // html2canvas($('#page2')[0], {
     //   allowTaint: true, 
@@ -108,6 +139,12 @@ $(document).ready(function(){
   	// console.log(id);
   	// setID(id);
   }
+
+  var clss = ["color-green", "color-red", "color-blue", "color-yellow"];
+	$('strong').each(function() {
+		i = Math.floor(Math.random() * 4); 
+		this.classList.add(clss[i]);
+	});
 
 });
 

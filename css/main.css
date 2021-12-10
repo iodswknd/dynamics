@@ -85,6 +85,7 @@ mark {
 	background-color: transparent !important;
 }
 
+
 #icon_iwa, .icon_iwa {
 	background-image: url(../images/icon_iwaizumi.png);
     background-size: contain;
@@ -534,7 +535,3 @@ span.cb {
     background-color: #1c1c1c;
 }
 
-canvas {
-	max-width: 100% !important;
-    height: auto !important;
-}
