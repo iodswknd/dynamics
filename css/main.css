@@ -260,8 +260,8 @@ img {
 }
 
 .check-item {
-	font-size: 1.35rem;
-	line-height: 2.8em;
+	font-size: 1.3rem;
+	line-height: 2.75em;
 	text-align: right;
 }
 
@@ -441,7 +441,7 @@ span.cb {
 	display: block;
 	font-size: .4em;
 	font-style: normal;
-	padding-top: .2em;
+	padding-top: .1em;
 	margin-bottom: -1rem;
 }
 
