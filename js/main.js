@@ -41,8 +41,10 @@ function take_screenshot() {
     });
     html2canvas($('#page1')[0], {
       allowTaint: true, 
+      scale: 1,
+      useCORS: true
     }).then(function(canvas) {
-        $('#screenshot1')[0].appendChild(canvas);
+        // $('#screenshot1')[0].appendChild(canvas);
         $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
     });
     // html2canvas($('#page2')[0], {
