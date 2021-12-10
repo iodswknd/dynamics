@@ -69,6 +69,15 @@ html {
 }
 
 @media screen and (max-width: 880px) {
+    .check-item {
+        font-size: 1.2em;
+    }
+
+    .cb {
+        width: 25px;
+        height: 25px;
+    }
+
     .grid-3-column  {
         grid-template-areas: "c"
                              "a"
