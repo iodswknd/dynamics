@@ -4,7 +4,7 @@ var viewport_meta = document.getElementById('viewport-meta');
 // Define our viewport meta values
 var viewports = {
   default: viewport_meta.getAttribute('content'),
-  screenshot: 'width=1200, initial-scale=1.0'
+  screenshot: 'width=1400'
 };
 
 var viewport_set = function(screenshot) {
@@ -14,7 +14,7 @@ var viewport_set = function(screenshot) {
   }
   else {
     viewport_meta.setAttribute( 'content', viewports.default );
-    // ocument.body.setAttribute('width', '');
+    // document.body.setAttribute('width', '');
   }
 }
 var link = document.createElement('link');
@@ -46,13 +46,13 @@ function take_screenshot() {
         // $('#screenshot1')[0].appendChild(canvas);
         $("#screenshot1Img").attr("src", canvas.toDataURL("img/png"));
     });
-    html2canvas($('#page2')[0], {
-      allowTaint: true, 
-      useCORS: true,
-    }).then(function(canvas) {
-        // $('#screenshot1')[0].appendChild(canvas);
-        $("#screenshot2Img").attr("src", canvas.toDataURL("img/png"));
-    });
+    // html2canvas($('#page2')[0], {
+    //   allowTaint: true, 
+    //   useCORS: true,
+    // }).then(function(canvas) {
+    //     // $('#screenshot1')[0].appendChild(canvas);
+    //     $("#screenshot2Img").attr("src", canvas.toDataURL("img/png"));
+    // });
     svgElements.forEach(function(item) {
       item.setAttribute("width", '');
     });
