@@ -4,7 +4,7 @@ var viewport_meta = document.getElementById('viewport-meta');
 // Define our viewport meta values
 var viewports = {
   default: viewport_meta.getAttribute('content'),
-  screenshot: 'width=1200, initial-scale=1.0'
+  screenshot: 'width=1400, initial-scale=1.0,maximum-scale=1.0'
 };
 
 var viewport_set = function(screenshot) {
@@ -18,10 +18,10 @@ var viewport_set = function(screenshot) {
   }
 }
 var link = document.createElement('link');
-link.href = "css/mobile.css";
+link.href = "css/responsive.css";
 link.rel = "stylesheet";
 link.type = "text/css";
-link.id = "mobile"
+link.id = "responsive"
 
 function getRandomInt(lower, upper) {
   var s = lower + Math.floor(Math.random() * (upper-lower));
@@ -32,7 +32,7 @@ function getRandomInt(lower, upper) {
 var svgElements = document.body.querySelectorAll('img');
 
 function take_screenshot() {
-    $('#mobile')[0].remove();
+    $('#responsive')[0].remove();
     viewport_set(true);
     
 
@@ -105,8 +105,14 @@ $(document).ready(function(){
   if (idIndex > -1) {
   	var id = href.slice(idIndex+6);
   	// console.log(id);
-  	setID(id);
+  	// setID(id);
   }
+
+  var clss = ["color-green", "color-red", "color-blue", "color-yellow"];
+	$('strong').each(function() {
+		i = Math.floor(Math.random() * 4); 
+		this.classList.add(clss[i]);
+	});
 
 });
 
@@ -122,7 +128,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
-	saveData();
+	// saveData();
     take_screenshot();
     modal.style.display = "block";
 }

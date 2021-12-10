@@ -7,7 +7,6 @@
 
 html {
     font-family: "Montserrat";
-    box-sizing: border-box;
     width: fit-content;
     font-size: 16px;
 }
@@ -51,7 +50,7 @@ img {
 
 .box {
 	width: 100%;
-	border: 1px solid black;
+	border: 1px solid #1c1c1c;
 	display: inline-block;
 	position: relative;
     background-image: url(../images/cross.png);
@@ -65,7 +64,7 @@ img {
 .slider-box {
     width: 100%;
     height: 55%;
-    border: 1px solid black;
+    border: 1px solid #1c1c1c;
     border-top: 0;
     border-bottom: 0;
     display: inline-block;
@@ -243,7 +242,7 @@ img {
 
 .nicknames input:focus-visible {
     outline: none;
-    caret-color: black;
+    caret-color: #1c1c1c;
 }
 
 /* Checkbox styles */
@@ -354,7 +353,7 @@ span.cb {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.4); /* #1c1c1c w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -376,7 +375,7 @@ span.cb {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #1c1c1c;
   text-decoration: none;
   cursor: pointer;
 }

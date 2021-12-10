@@ -2,114 +2,108 @@
   <head>
     <title>IwaOiDaiSuga Dynamics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.86" id="viewport-meta"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/mobile.css" id="mobile">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" id="responsive">
   </head>
   <body>
-    <h1>get to know my iwaoidaisuga dynamics in...</h1>
-    <div id="page1">
+    <h1>get to know my iwaoidaisuga in <strong>5 minutes</strong></h1>
+    <div id="page1" class="page">
     <div class="header screenshot-only">
-      <h2><mark>some example <span class="color-yellow">header</span></mark></h2>
+      <h1><mark>part <span class="color-yellow">one</span></mark></h1>
     </div>
     <div id="theboys" class="grid-container grid-4-column">
-      <div id="iwaizumi" class="grid-item">
+      <div id="iwaizumi" class="grid-item boy">
         <h2>Iwaizumi Hajime</h2>
         <div class="photo"><img draggable="false" src="images/pfp_iwaizumi.png"/></div>
-        <div class="nicknames">
-          <label for="oi2iwa">nickname from Oikawa</label>
-          <input class="user-input" id="oi2iwa" type="text" value="" name="oi2iwa">
-        </div>
-        <div class="nicknames">
-          <label for="dai2iwa">nickname from Daichi</label>
-          <input class="user-input" id="dai2iwa" type="text" value="" name="dai2iwa">
-        </div>
-        <div class="nicknames">
-          <label for="suga2iwa">nickname from Suga</label>
-          <input class="user-input" id="suga2iwa" type="text" value="" name="suga2iwa">
-        </div>
+        <h3>nicknames</h3>
+        <input class="user-input" id="icon_oi" type="text" value="" name="oi2iwa">
+        <input class="user-input" id="icon_dai" type="text" value="" name="dai2iwa">
+        <input class="user-input" id="icon_sug" type="text" value="" name="suga2iwa">
       </div>
-      <div id="oikawa" class="grid-item">
+      <div id="oikawa" class="grid-item boy">
         <h2>Oikawa Tooru</h2>
         <div class="photo"><img draggable="false" src="images/pfp_oikawa.png"/></div>
-        <div class="nicknames">
-          <label for="iwa2oi">nickname from Iwaizumi</label>
-          <input class="user-input" id="iwa2oi" type="text" value="" name="iwa2oi">
-        </div>
-        <div class="nicknames">
-          <label for="dai2oi">nickname from Daichi</label>
-          <input class="user-input" id="dai2oi" type="text" value="" name="dai2oi">
-        </div>
-        <div class="nicknames">
-          <label for="suga2oi">nickname from Suga</label>
-          <input class="user-input" id="suga2oi" type="text" value="" name="suga2oi">
-        </div>
+        <h3>nicknames</h3>
+        <input class="user-input" id="icon_iwa" type="text" value="" name="iwa2oi">
+        <input class="user-input" id="icon_dai" type="text" value="" name="dai2oi">
+        <input class="user-input" id="icon_sug" type="text" value="" name="suga2oi">
       </div>
-      <div id="daichi" class="grid-item">
+      <div id="daichi" class="grid-item boy">
         <h2>Sawamura Daichi</h2>
         <div class="photo"><img draggable="false" src="images/pfp_daichi.png"/></div>
-        <div class="nicknames">
-          <label for="iwa2dai">nickname from Iwaizumi</label>
-          <input class="user-input" id="iwa2dai" type="text" value="" name="iwa2dai">
-        </div>
-        <div class="nicknames">
-          <label for="oi2dai">nickname from Oikawa</label>
-          <input class="user-input" id="oi2dai" type="text" value="" name="oi2dai">
-        </div>
-        <div class="nicknames">
-          <label for="suga2dai">nickname from Suga</label>
-          <input class="user-input" id="suga2dai" type="text" value="" name="suga2dai">
-        </div>
+        <h3>nicknames</h3>
+        <input class="user-input" id="icon_iwa" type="text" value="" name="iwa2dai">
+        <input class="user-input" id="icon_oi" type="text" value="" name="oi2dai">
+        <input class="user-input" id="icon_sug" type="text" value="" name="suga2dai">
       </div>
-      <div id="suga" class="grid-item">
+      <div id="suga" class="grid-item boy">
         <h2>Sugawara Koushi</h2>
         <div class="photo"><img draggable="false" src="images/pfp_suga.png"/></div>
-        <div class="nicknames">
-          <label for="iwa2suga">nickname from Iwaizumi</label>
-          <input class="user-input" id="iwa2suga" type="text" value="" name="iwa2suga">
-        </div>
-        <div class="nicknames">
-          <label for="oi2suga">nickname from Oikawa</label>
-          <input class="user-input" id="oi2suga" type="text" value="" name="oi2suga">
-        </div>
-        <div class="nicknames">
-          <label for="dai2suga">nickname from Daichi</label>
-          <input class="user-input" id="dai2suga" type="text" value="" name="dai2suga">
-        </div>
+        <h3>nicknames</h3>
+        <input class="user-input" id="icon_iwa" type="text" value="" name="iwa2suga">
+        <input class="user-input" id="icon_oi" type="text" value="" name="oi2suga">
+        <input class="user-input" id="icon_dai" type="text" value="" name="dai2suga">
       </div>
     </div>
 
-    <div id="info1" class="grid-container grid-3-column">
-      <div id="charts1" class="grid-item">
-        <p>how it happens</p>
-        <div class="box">
-          <div class="dummy"></div>
-          <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_iwaizumi.png"/>
-          </div>
-          <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_oikawa.png"/>
-          </div>
-          <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_daichi.png"/>
-          </div>
-          <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_suga.png"/>
-          </div>
+    <div id="info1" class="grid-container grid-3-column columns-30-33-30">
+      <div id="charts1" class="charts grid-item">
+        <div class="chart">
+          <h3>how it happens</h3>
+          <div class="box">
+            <div class="dummy"></div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_iwaizumi.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_oikawa.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_daichi.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_suga.png"/>
+            </div>
 
-          <!--labels-->
-          <small class="label top">falls in love slowly</small>
-          <small class="label bottom">love at first sight</small>
-          <small class="label left">unintentionally</small>
-          <small class="label right">tries to get closer</small>
+            <!--labels-->
+            <small class="label top center">falls in love slowly</small>
+            <small class="label bottom center">love at first sight</small>
+            <small class="label left middle">unintentionally</small>
+            <small class="label right middle">tries to get closer</small>
+          </div>
+        </div>
+        <div class="chart">
+          <h3>handling conflict</h3>
+          <div class="box">
+            <div class="dummy"></div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_iwaizumi.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_oikawa.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_daichi.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_suga.png"/>
+            </div>
+
+            <!--labels-->
+            <small class="label top center">often starts arguments</small>
+            <small class="label bottom center">very laid back</small>
+            <small class="label left middle">forgives quickly</small>
+            <small class="label right middle">takes some time</small>
+          </div>
         </div>
       </div>
       <div id="check" class="grid-item">
         <div class="topic-check">
           <div class="check-item">
-            <span>budgets</span>
+            <span>makes decisions</span>
             <div class="checkbox">
               <span class="cb" type="checkbox" id="iwa"></span>
               <span class="cb" type="checkbox" id="oi"></span>
@@ -118,7 +112,16 @@
             </div>
           </div>
           <div class="check-item">
-            <span>makes decisions</span>
+            <span>does the cooking</span>
+            <div class="checkbox">
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
+            </div>
+          </div>
+          <div class="check-item">
+            <span>does the cleaning</span>
             <div class="checkbox">
               <span class="cb" type="checkbox" id="iwa"></span>
               <span class="cb" type="checkbox" id="oi"></span>
@@ -136,7 +139,7 @@
             </div>
           </div>
           <div class="check-item">
-            <span>cooks</span>
+            <span>does their budget</span>
             <div class="checkbox">
               <span class="cb" type="checkbox" id="iwa"></span>
               <span class="cb" type="checkbox" id="oi"></span>
@@ -145,7 +148,7 @@
             </div>
           </div>
           <div class="check-item">
-            <span>cleans</span>
+            <span>ticklish</span>
             <div class="checkbox">
               <span class="cb" type="checkbox" id="iwa"></span>
               <span class="cb" type="checkbox" id="oi"></span>
@@ -154,7 +157,7 @@
             </div>
           </div>
           <div class="check-item">
-            <span>first to confess their feelings</span>
+            <span>hogs the blanket</span>
             <div class="checkbox">
               <span class="cb" type="checkbox" id="iwa"></span>
               <span class="cb" type="checkbox" id="oi"></span>
@@ -163,7 +166,61 @@
             </div>
           </div>
           <div class="check-item">
-            <span>first to apologize after a fight</span>
+            <span>amazing kisser</span>
+            <div class="checkbox">
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
+            </div>
+          </div>
+          <div class="check-item">
+            <span>more charismatic</span>
+            <div class="checkbox">
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
+            </div>
+          </div>
+          <div class="check-item">
+            <span>first to confess</span>
+            <div class="checkbox">
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
+            </div>
+          </div>
+          <div class="check-item">
+            <span>first to apologize</span>
+            <div class="checkbox">
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
+            </div>
+          </div>
+          <div class="check-item">
+            <span>best caregiver</span>
+            <div class="checkbox">
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
+            </div>
+          </div>
+          <div class="check-item">
+            <span>most protective</span>
+            <div class="checkbox">
+              <span class="cb" type="checkbox" id="iwa"></span>
+              <span class="cb" type="checkbox" id="oi"></span>
+              <span class="cb" type="checkbox" id="dai"></span>
+              <span class="cb" type="checkbox" id="suga"></span>
+            </div>
+          </div>
+          <div class="check-item">
+            <span>proposes</span>
             <div class="checkbox">
               <span class="cb" type="checkbox" id="iwa"></span>
               <span class="cb" type="checkbox" id="oi"></span>
@@ -173,46 +230,70 @@
           </div>
         </div>
       </div>
-      <div id="charts2" class="grid-item">
-        <p>misadventures</p>
-        <div class="box">
-          <div class="dummy"></div>
-          <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_iwaizumi.png"/>
-          </div>
-          <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_oikawa.png"/>
-          </div>
-          <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_daichi.png"/>
-          </div>
-          <div id="draggable" class="free wrapper">
-            <img draggable="false" src="images/icon_suga.png"/>
-          </div>
+      <div id="charts2" class="charts grid-item">
+        <div class="chart">
+          <h3>showing affection</h3>
+          <div class="box">
+            <div class="dummy"></div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_iwaizumi.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_oikawa.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_daichi.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_suga.png"/>
+            </div>
 
-          <!--labels-->
-          <small class="label top">gets them into trouble</small>
-          <small class="label bottom">gets them out of trouble</small>
-          <small class="label left">joins in on trouble</small>
-          <small class="label right">avoids trouble</small>
+            <!--labels-->
+            <small class="label top center">takes initiative</small>
+            <small class="label bottom center">lets things happen</small>
+            <small class="label left middle">verbal</small>
+            <small class="label right middle">non-verbal</small>
+          </div>
+        </div>
+        <div class="chart">
+          <h3>misadventures</h3>
+          <div class="box">
+            <div class="dummy"></div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_iwaizumi.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_oikawa.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_daichi.png"/>
+            </div>
+            <div id="draggable" class="free wrapper">
+              <img draggable="false" src="images/icon_suga.png"/>
+            </div>
+
+            <!--labels-->
+            <small class="label top center">gets them into trouble</small>
+            <small class="label bottom center">gets them out of trouble</small>
+            <small class="label left middle">joins in on trouble</small>
+            <small class="label right middle">avoids trouble</small>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="footer screenshot-only">
-      <h2><mark>iwaoidaisuga <span class="color-blue">weekend</span></mark>
-        <br/><small>february 11 - february 14, 2022</small></h2>
+      <h1><mark>iwaoidaisuga in <span class="color-blue">5 minutes</span></mark></h1>
     </div>
   </div>
 
-
-  <div id="page2">
+  <div id="page2" class="page">
     <div class="header screenshot-only">
-      <h2><mark>some example <span class="color-green">header</span></mark></h2>
+      <h1><mark>part <span class="color-red">two</span></mark></h1>
     </div>
+
     <div id="info2" class="grid-container grid-2-column no-row-gap">
       <div class="grid-item slider-container">
-        <span id="label1" class="text-right">little spoon</span>
+        <span id="label1" class="text-right">introverted</span>
         <div id="slider" class="slider-box">
           <div id="draggable" class="slide wrapper">
             <img draggable="false" src="images/icon_iwaizumi.png"/>
@@ -228,10 +309,10 @@
           </div>
           <span class="slider-line"></span>
         </div>
-        <span id="label2" class="text-left">big spoon</span>
+        <span id="label2" class="text-left">extroverted</span>
       </div>
       <div class="grid-item slider-container">
-        <span id="label1" class="text-right">lends clothes</span>
+        <span id="label1" class="text-right">cuddle at home</span>
         <div id="slider" class="slider-box">
           <div id="draggable" class="slide wrapper">
             <img draggable="false" src="images/icon_iwaizumi.png"/>
@@ -247,7 +328,83 @@
           </div>
           <span class="slider-line"></span>
         </div>
-        <span id="label2" class="text-left">"borrows" clothes</span>
+        <span id="label2" class="text-left">go out on an adventure</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">morning person</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">night owl</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">public speaker</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">lets others do the talking</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">big spoon</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">little spoon</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">great driver</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">not allowed to drive</span>
       </div>
       <div class="grid-item slider-container">
         <span id="label1" class="text-right">doesn't use pet names</span>
@@ -269,7 +426,7 @@
         <span id="label2" class="text-left"><em>loves</em> pet names</span>
       </div>
       <div class="grid-item slider-container">
-        <span id="label1" class="text-right">introverted</span>
+        <span id="label1" class="text-right">beautiful penmanship</span>
         <div id="slider" class="slider-box">
           <div id="draggable" class="slide wrapper">
             <img draggable="false" src="images/icon_iwaizumi.png"/>
@@ -285,13 +442,236 @@
           </div>
           <span class="slider-line"></span>
         </div>
-        <span id="label2" class="text-left">extroverted</span>
+        <span id="label2" class="text-left">illegible scribbles</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">master chef</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">will poison you</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">plans things to a T</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">goes with the flow</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">screams at bugs</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">handles the bugs</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">blunt/straightforward</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">beats around the bush</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">lends clothes</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">"borrows" clothes</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">gives presents</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">does favors</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">fashionable</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">shirt and pants</span>
+      </div>
+      <div class="grid-item slider-container">
+        <span id="label1" class="text-right">heart on their sleeve</span>
+        <div id="slider" class="slider-box">
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="slide wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+          <span class="slider-line"></span>
+        </div>
+        <span id="label2" class="text-left">keeps things in</span>
+      </div>
+    </div>
+
+    <div id="info3" class="grid-container grid-3-column charts">
+      <div class="chart grid-item">
+        <h3>are you okay?</h3>
+        <div class="box triangle">
+          <div class="dummy"></div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+
+          <!--labels-->
+          <small class="label top center">*immediately breaks down*</small>
+          <small class="label left bottom">i'm always okay</small>
+          <small class="label right bottom">is anyone ever okay?</small>
+        </div>
+      </div>
+      <div class="chart grid-item">
+        <h3>is stabbing someone immoral?</h3>
+        <div class="box triangle">
+          <div class="dummy"></div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+
+          <!--labels-->
+          <small class="label top center">not if they consent</small>
+          <small class="label left bottom">YES????</small>
+          <small class="label right bottom">depends who it is</small>
+        </div>
+      </div>
+      <div class="chart grid-item">
+        <h3>wake me up</h3>
+        <div class="box triangle">
+          <div class="dummy"></div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_iwaizumi.png"/>
+          </div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_oikawa.png"/>
+          </div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_daichi.png"/>
+          </div>
+          <div id="draggable" class="free wrapper">
+            <img draggable="false" src="images/icon_suga.png"/>
+          </div>
+
+          <!--labels-->
+          <small class="label top center">when september ends</small>
+          <small class="label left bottom">before you go-go</small>
+          <small class="label right bottom">WAKE ME UP INSIDE!</small>
+        </div>
       </div>
     </div>
 
     <div class="footer screenshot-only">
-      <h2><mark>iwaoidaisuga <span class="color-red">weekend</span></mark>
-        <br/><small>february 11 - february 14, 2022</small></h2>
+      <h1><mark>iwaoidaisuga in <span class="color-green">5 minutes</span></mark></h1>
     </div>
   </div>
   <!-- Trigger/Open The Modal -->
@@ -305,17 +685,15 @@
       <span class="close">&times;</span>
       <p>Right-click (hold down on mobile) to save both photos.</p>
       <div id="screenshot1">
-        <h3>Part 1</h3>
+        <!-- <h3>Part 1</h3> -->
         <img src="" id="screenshot1Img">
       </div>
       <div id="screenshot2">
-        <h3>Part 2</h3>
+        <!-- <h3>Part 2</h3> -->
         <img src="" id="screenshot2Img">
       </div>
-      <p>Copy this link to get back to your current version! <a id="saveLink">iodswknd.github.io/dynamics/?data=</a></p>
+      <!-- <p>Copy this link to get back to your current version! <a id="saveLink">iodswknd.github.io/dynamics/?data=</a></p> -->
     </div>
-
-  </div>
   
   </body>
   <script src="//code.jquery.com/jquery-1.12.4.js"></script>
