@@ -18,7 +18,7 @@ var viewport_set = function(screenshot) {
   }
 }
 var link = document.createElement('link');
-link.href = "css/mobile.css";
+link.href = "css/responsive.css";
 link.rel = "stylesheet";
 link.type = "text/css";
 link.id = "mobile"
