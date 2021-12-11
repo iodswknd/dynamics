@@ -42,7 +42,7 @@ function take_screenshot() {
 	html2canvas($('#page1')[0], {
       allowTaint: true, 
       useCORS: true,
-      scale: 1,
+      scale: 2,
     }).then(function(canvas) {
         // $('#screenshot1')[0].appendChild(canvas);
         $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
@@ -51,7 +51,7 @@ function take_screenshot() {
     html2canvas($('#page2')[0], {
       allowTaint: true, 
       useCORS: true,
-      scale: 1,
+      scale: 2,
     }).then(function(canvas) {
         // $('#screenshot1')[0].appendChild(canvas);
         $("#screenshot2Img").attr("src", canvas.toDataURL("img/jpeg"));
@@ -78,6 +78,9 @@ $(document).ready(function(){
       // Test if the div element is empty
       $(this).draggable({
         containment: 'parent',
+        start: function(e, ui) {
+        	$(this).insertBefore('#'+this.dataset.dummy);
+        },
         stop: function(e, ui) {
           var percL = ui.position.left / ui.helper.parent().width() * 100;
           var percT = ui.position.top / ui.helper.parent().height() * 100;
@@ -93,6 +96,9 @@ $(document).ready(function(){
       $(this).draggable({
         axis: 'x',
         containment: 'parent',
+        start: function(e, ui) {
+        	$(this).insertBefore('#'+this.dataset.slider);
+        },
         stop: function(e, ui) {
           var percL = ui.position.left / ui.helper.parent().width() * 100;
           var percT = ui.position.top / ui.helper.parent().height() * 100;
