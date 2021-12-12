@@ -46,15 +46,17 @@ function take_screenshot() {
     }).then(function(canvas) {
         // $('#screenshot1')[0].appendChild(canvas);
         $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
-    });
-    
-    html2canvas($('#page2')[0], {
-      allowTaint: true, 
-      useCORS: true,
-      scale: 1,
-    }).then(function(canvas) {
-        // $('#screenshot1')[0].appendChild(canvas);
-        $("#screenshot2Img").attr("src", canvas.toDataURL("img/jpeg"));
+    }).then(function() {
+      html2canvas($('#page2')[0], {
+	      allowTaint: true, 
+	      useCORS: true,
+	      scale: 1,
+	    }).then(function(canvas) {
+	        // $('#screenshot1')[0].appendChild(canvas);
+	        $("#screenshot2Img").attr("src", canvas.toDataURL("img/jpeg"));
+	    })
+	}).then(function() {
+	    document.head.appendChild(link);
     });
     // html2canvas($('#page2')[0], {
     //   allowTaint: true, 
@@ -67,7 +69,6 @@ function take_screenshot() {
       item.setAttribute("width", '');
     });
 
-    document.head.appendChild(link);
     viewport_set(false);
   };
 

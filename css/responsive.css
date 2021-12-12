@@ -10,6 +10,7 @@ html {
 .page {
     min-height: initial;
     padding: 0;
+    justify-content: unset;
 }
 
 .user-input {
