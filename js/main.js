@@ -4,7 +4,7 @@ var viewport_meta = document.getElementById('viewport-meta');
 // Define our viewport meta values
 var viewports = {
   default: viewport_meta.getAttribute('content'),
-  screenshot: 'width=1400,initial-scale=1.0,maximum-scale=1.0'
+  screenshot: 'width=1500,initial-scale=1.0,maximum-scale=1.0'
 };
 
 var viewport_set = function(screenshot) {
@@ -33,7 +33,7 @@ var svgElements = document.body.querySelectorAll('img');
 
 function take_screenshot() {
     $('#responsive')[0].remove();
-    viewport_set(true);
+    // viewport_set(true);
     
 
     svgElements.forEach(function(item) {
@@ -42,7 +42,7 @@ function take_screenshot() {
 	html2canvas($('#page1')[0], {
       allowTaint: true, 
       useCORS: true,
-      scale: 2,
+      scale: 1,
     }).then(function(canvas) {
         // $('#screenshot1')[0].appendChild(canvas);
         $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
@@ -51,7 +51,7 @@ function take_screenshot() {
     html2canvas($('#page2')[0], {
       allowTaint: true, 
       useCORS: true,
-      scale: 2,
+      scale: 1,
     }).then(function(canvas) {
         // $('#screenshot1')[0].appendChild(canvas);
         $("#screenshot2Img").attr("src", canvas.toDataURL("img/jpeg"));
