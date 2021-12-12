@@ -3,126 +3,17 @@ html {
     margin: auto;
 }
 
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: .34em;
-}
-
-h3 {
-    margin: .1em 0;
-    font-size: 1.6rem;
-    line-height: 1.3em;
-}
-
 .screenshot-only {
     display: none;
 }
 
 .page {
-    padding: 1.6em 4em;
     min-height: initial;
     padding: 0;
 }
 
-.page > * {
-    margin: 1rem 0;
-}
-
-.boy h3 {
-    margin-top: 0.1em;
-    margin-bottom: -0.2em;
-}
-
 .user-input {
     border-bottom: 1px solid #1c1c1c;
-    font-size: 1.1rem;
-    line-height: 1.35em;
-    background-position: 1em;
-    margin-top: 0.3em;
-}
-
-#info1 .charts .chart:first-child {
-    margin-bottom: 1.1rem;
-}
-
-.box .label {
-    padding: .4em;
-    font-size: 1em;
-}
-
-.topic-check {
-    margin-top: 1.6em;
-}
-
-.check-item {
-    font-size: 1.3rem;
-    line-height: 2.75em;
-}
-
-.check-item>span {
-    padding-right: .5em;
-}
-
-.cb {
-    margin-left: .6em;
-}
-
-.slider-container {
-    font-size: 1.3em;
-    height: 4.5em;
-}
-
-.slider-line {
-    margin-top: 1.4rem;
-}
-
-#draggable.slide {
-    height: 2.5em;
-    width: 2.5em;
-}
-
-.triangle-chart .label.top {
-    margin-top: 1.1rem;
-}
-
-.header h1::before, .footer h1::before {
-    top: .5em;
-}
-
-.footer h1::after {
-    font-size: .4em;
-    padding-top: .1em;
-    margin-bottom: -1rem;
-}
-
-.footer mark {
-    padding-left: .5em;
-}
-
-.header mark {
-    padding-right: .5em;
-}
-
-
-.grid-4-column {
-    column-gap: 4rem;
-}
-
-.grid-3-column {
-    column-gap: 2rem;
-}
-
-.columns-30-33-30 {
-    column-gap: 3.5%;
-}
-
-.grid-2-column {
-    column-gap: 4rem;
-    row-gap: 1em;
 }
 
 @media screen and (max-width: 1280px) {

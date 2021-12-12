@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size: 45px;
+	font-size: 3rem;
 }
 
 .screenshot-only h1 {
@@ -39,25 +39,28 @@ h1 {
 
 h2 {
 	margin-top: 0;
-	font-size: 30px;
-	margin-bottom: 10px;
+	font-size: 2rem;
+    margin-bottom: .34em;
 }
 
 h3 {
-	margin: 2.5px 0;
-	font-size: 24px;
-	line-height: 30px;
+	margin: .1em 0;
+    font-size: 1.6rem;
+    line-height: 1.3em;
 }
 
 .page {
 	display: flex;
 	flex-direction: column;
-	padding: 24px 60px;
+    padding: 1.6em 4em;
 	min-height: 1714px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .page > * {
-	margin: 24px 0;
+	margin: 1.6rem 0;
 }
 
 mark {
@@ -67,14 +70,13 @@ mark {
 .user-input {
     font-family: "Architects Daughter";
     border: 0;
-	/*border-bottom: 1px solid #1c1c1c;*/
 	border-radius: 0;
-	font-size: 17px;
-    line-height: 24px;
+    font-size: 1.1rem;
+    line-height: 1.35em;
 	text-align: center;
 	text-transform: lowercase;
-    background-position: 20px;
-    margin-top: 5px;
+    background-position: 1em;
+    margin-top: 0.3em;
     background-color: transparent !important;
 }
 
@@ -134,24 +136,24 @@ img {
 
 .grid-4-column {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 60px;
+    column-gap: 4rem;
 }
 
 .grid-3-column {
     grid-template-areas: "a c b";
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px;
+    column-gap: 2rem;
 }
 
 .columns-30-33-30 {
-	grid-template-columns: 29% 33.5% 29%;
-    column-gap: 4.25%;
+	grid-template-columns: 30% 33% 30%;
+    column-gap: 3.5%;
 }
 
 .grid-2-column {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 60px;
-    row-gap: 24px;
+    column-gap: 4rem;
+    row-gap: 1.2rem;
 }
 
 #theboys {
@@ -164,8 +166,8 @@ img {
 }
 
 .boy h3 {
-	margin-top: 3px;
-	margin-bottom: -5px;
+    margin-top: 0.1em;
+    margin-bottom: -0.2em;
 }
 
 
@@ -182,7 +184,7 @@ img {
 }
 
 #info1 .charts .chart:first-child {
-	margin-bottom: 20px;
+	margin-bottom: 1.3rem;
 }
 
 .box {
@@ -207,9 +209,9 @@ img {
     display: table-cell;
     vertical-align: bottom;
     width: 40%;
-    padding: 5px;
     background: white;
-    font-size: 15px;
+    padding: .4em;
+    font-size: 1em;
     text-align: center;
 
 }
@@ -252,7 +254,7 @@ img {
 }
 
 .triangle-chart .label.top {
-    margin-top: 16px;
+    margin-top: 1.1rem;
 }
 
 .triangle-chart .label.left {
@@ -268,17 +270,17 @@ img {
 .topic-check {
 	width: max-content;
 	margin: auto;
-	margin-top: 24px;
+    margin-top: 1.6em;
 }
 
 .check-item {
-	font-size: 19px;
-	line-height: 53px;
+    font-size: 1.3rem;
+    line-height: 2.75em;
 	text-align: right;
 }
 
 .check-item>span {
-	padding-right: 10px;
+    padding-right: .5em;
 }
 
 .checkbox {
@@ -288,21 +290,17 @@ img {
     vertical-align: middle;
 }
 
-.checkbox > span {
-    color: #34495E;
-}
-
 .cb {
-    height: 30px;
-    width: 30px;
+    height: 2rem;
+    width: 2rem;
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
-    border: 1px solid #34495E;
+    border: 1px solid #1c1c1c;
     outline: none;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: .6em;
   }
 
 .cb.on {
@@ -362,7 +360,7 @@ img {
     height: 1px;
     width: 100%;
     display: inherit;
-    margin-top: 21px;
+    margin-top: 1.4rem;
 }
 
 .slider-container{
@@ -371,8 +369,8 @@ img {
                          "s s"
                          "s s";
     align-items: center;
-    height: 80px;
-    font-size: 19px;
+    font-size: 1.3em;
+    height: 4.5em;
 }
 
 #label1 {
@@ -409,8 +407,8 @@ img {
 
 #draggable.slide {
     position: absolute;
-    height: 45px;
-    width: 45px;
+    height: 2.5em;
+    width: 2.5em;
     z-index: 99;
     cursor: move;
     top:0;
@@ -435,24 +433,24 @@ img {
     background: #1c1c1c;
     position: relative;
     z-index: -2;
-    top: 22px;
+    top: .5em;
 }
 
 .footer h1::after {
 	content: "@iwaoidaisugawkd";
 	display: block;
-	font-size: 18px;
 	font-style: normal;
-	padding-top: 2px;
-	margin-bottom: -15px;
+	font-size: .4em;
+    padding-top: .1em;
+    margin-bottom: -1rem;
 }
 
 .footer mark {
-	padding-left: 23px;
+    padding-left: .5em;
 }
 
 .header mark {
-	padding-right: 23px;
+    padding-right: .5em;
 }
 
 
