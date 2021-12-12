@@ -53,7 +53,7 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	padding: 1.6em 4em;
-	max-height: 1600px;
+	min-height: 1600px;
 }
 
 .page > * {
@@ -69,7 +69,8 @@ mark {
     border: 0;
 	/*border-bottom: 1px solid #1c1c1c;*/
 	border-radius: 0;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
+    line-height: 1.35em;
 	text-align: center;
 	text-transform: lowercase;
     background-position: 1em;
@@ -247,8 +248,20 @@ img {
 
 .triangle {
 	background-image: url(../images/triangle.png);
-    background-size: 86%;
+    /*background-size: con;*/
     border: 0;
+}
+
+.triangle-chart .label.top {
+    margin-top: 1em;
+}
+
+.triangle-chart .label.left {
+    float: left;
+}
+
+.triangle-chart .label.right {
+    float: right;
 }
 
 /* Checkbox styles */
@@ -354,7 +367,7 @@ span.cb {
     height: 1px;
     width: 100%;
     display: inherit;
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
 }
 
 .slider-container{
@@ -417,6 +430,7 @@ span.cb {
     /*top: 42%;
     left: 42%;*/
     width: 17%;
+    opacity: .8;
     /*padding-bottom:17%;*/
 }
 
