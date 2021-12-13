@@ -375,9 +375,11 @@ img {
 
 #label1 {
     text-align:left !important;
+    padding-right: 1rem;
 }
 #label2 {
     text-align:right !important;
+    padding-left: 1rem;
 }
 
 #label1 {

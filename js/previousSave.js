@@ -12,19 +12,148 @@ var savedData = {}
 var dataID = null;
 var form = {};
 
-var columns = ["Iwa_Nicknames", "Oi_Nicknames", "Dai_Nicknames", "Sug_Nicknames","cb_budgets", "cb_decisions", "cb_dates", "cb_cooks", "cb_cleans", "cb_confess", "cb_apologize", "iwa_howithappens", "oi_howithappens", "dai_howithappens", "sug_howithappens", "iwa_misadventures", "oi_misadventures", "dai_misadventures", "sug_misadventures", "little_bigspoon", "lends_borrowsclothes", "doesntuse_lovespetnames", "introverted_extroverted"];
-var formIDs = ['entry.1585191424', 'entry.1698431986', 'entry.2133776019', 'entry.438505046', 'entry.2114878919', 'entry.1520086278', 'entry.1565308950', 'entry.1345651638', 'entry.1068116319', 'entry.578264511', 'entry.678755395', 'entry.780992694', 'entry.21446769', 'entry.1435325567', 'entry.170180370', 'entry.1916324367', 'entry.48069107', 'entry.1237505231', 'entry.1964309255', 'entry.456826551', 'entry.1951479820', 'entry.792238866', 'entry.455031031', 'entry.1269101513'];
+var columns = [
+	"unique_id",
+    "nicknames_iwa",
+    "nicknames_oi",
+    "nicknames_dai",
+    "nicknames_sug",
+    "cb_1",
+    "cb_2",
+    "cb_3",
+    "cb_4",
+    "cb_5",
+    "cb_6",
+    "cb_7",
+    "cb_8",
+    "cb_9",
+    "cb_10",
+    "cb_11",
+    "cb_12",
+    "cb_13",
+    "cb_14",
+    "cb_15",
+    "ch_1_iwa",
+    "ch_1_oi",
+    "ch_1_dai",
+    "ch_1_sug",
+    "ch_2_iwa",
+    "ch_2_oi",
+    "ch_2_dai",
+    "ch_2_sug",
+    "ch_3_iwa",
+    "ch_3_oi",
+    "ch_3_dai",
+    "ch_3_sug",
+    "ch_4_iwa",
+    "ch_4_oi",
+    "ch_4_dai",
+    "ch_4_sug",
+    "s_1",
+    "s_2",
+    "s_3",
+    "s_4",
+    "s_5",
+    "s_6",
+    "s_7",
+    "s_8",
+    "s_9",
+    "s_10",
+    "s_11",
+    "s_12",
+    "s_13",
+    "s_14",
+    "s_15",
+    "s_16",
+    "tr_1_iwa",
+    "tr_1_oi",
+    "tr_1_dai",
+    "tr_1_sug",
+    "tr_2_iwa",
+    "tr_2_oi",
+    "tr_2_dai",
+    "tr_2_sug",
+    "tr_3_iwa",
+    "tr_3_oi",
+    "tr_3_dai",
+    "tr_3_sug"
+];
+var formIDs = [
+    "entry.1585191424",
+    "entry.1698431986",
+    "entry.2133776019",
+    "entry.438505046",
+    "entry.2114878919",
+    "entry.1520086278",
+    "entry.1565308950",
+    "entry.1345651638",
+    "entry.1068116319",
+    "entry.578264511",
+    "entry.678755395",
+    "entry.780992694",
+    "entry.997886833",
+    "entry.1052260950",
+    "entry.1639384151",
+    "entry.247342645",
+    "entry.519169177",
+    "entry.929615647",
+    "entry.1500929023",
+    "entry.1432582497",
+    "entry.21446769",
+    "entry.1435325567",
+    "entry.170180370",
+    "entry.1916324367",
+    "entry.48069107",
+    "entry.1237505231",
+    "entry.1964309255",
+    "entry.456826551",
+    "entry.569672242",
+    "entry.1444093288",
+    "entry.911451037",
+    "entry.1573041261",
+    "entry.391847614",
+    "entry.1678770624",
+    "entry.158745544",
+    "entry.2070994854",
+    "entry.1951479820",
+    "entry.792238866",
+    "entry.455031031",
+    "entry.1269101513",
+    "entry.1467067489",
+    "entry.1905584741",
+    "entry.1092029485",
+    "entry.1171111455",
+    "entry.1283569873",
+    "entry.1279158097",
+    "entry.2136470687",
+    "entry.242442710",
+    "entry.2050963428",
+    "entry.857653266",
+    "entry.1999530424",
+    "entry.1743214955",
+    "entry.1062052674",
+    "entry.1848017167",
+    "entry.281002515",
+    "entry.1384888900",
+    "entry.236782703",
+    "entry.1612823789",
+    "entry.1484922073",
+    "entry.1464094100",
+    "entry.893258575",
+    "entry.2010601925",
+    "entry.6855485",
+    "entry.2113441679"
+];
 
 var sheet = new spreadSheet(
-  "1CyUB0-dYJxjqx7tu6h0yFS7f3zyR7s9TrSHgpeMFphM",
+  "1jDmSQ2Y99kKUx9heFHYbYLOwmGCjCeegM-9-MTol1L8",
   null,
   function(data) {
      json = data.getAsObjects()
      for (const i in json) {
      	const entry = json[i];
-     	const id = entry["Unique_ID"]
+     	const id = entry["unique_id"]
      	var obj = {};
-     	// console.log(id);
      	for (const j in columns) {
      		const column = columns[j];
      		obj[column] = entry[column].split(';');
@@ -96,7 +225,9 @@ function saveBoxes(columns) {
 	htmlBoxes = $('.free');
 
 	htmlBoxes.each(function(i) {
-		var formID = columns[i];
+		var offset = parseInt(this.dataset.index);
+		var j = Math.floor(i / 4);
+		var formID = columns[(j*4)+offset];
 		var left = this.style.left;
 		var top = this.style.top
 
@@ -122,12 +253,13 @@ function saveSliders(columns) {
 
 	htmlSliders.each(function(i) {
 		var formID = columns[Math.floor(i/4)]
+		var index = parseInt(this.dataset.index);
 		var left = this.style.left;
 
 		if (!(formID in form)) {
-			form[formID] = [];
+			form[formID] = ["","","",""];
 		}
-		form[formID].push(left);
+		form[formID][index] = left;
 	});
 }
 
@@ -149,14 +281,15 @@ function setData(ID) {
 		throw "ERROR: ID not in savedData";
 	} else {
 		data = savedData[ID];
-		inputs = columns.slice(0,4);
-		checkboxes = columns.slice(4,11);
-		boxes = columns.slice(11,19);
-		sliders = columns.slice(19);
+		inputs = columns.slice(1,5);
+		checkboxes = columns.slice(5,20);
+		boxes = columns.slice(20,36);
+		sliders = columns.slice(36,52);
+		triangles = columns.slice(52);
 
 		setInputs(data, inputs);
 		setCheckboxes(data, checkboxes);
-		setBoxes(data, boxes);
+		setBoxes(data, boxes.concat(triangles));
 		setSliders(data, sliders);
 	}
 }
@@ -172,13 +305,14 @@ function saveData() {
 	// console.log(dataID, form);
 
 	inputs = formIDs.slice(1,5);
-	checkboxes = formIDs.slice(5,12);
-	boxes = formIDs.slice(12,20);
-	sliders = formIDs.slice(20);
+	checkboxes = formIDs.slice(5,20);
+	boxes = formIDs.slice(20,36);
+	sliders = formIDs.slice(36,52);
+	triangles = formIDs.slice(52);
 
 	saveInputs(inputs);
 	saveCheckboxes(checkboxes);
-	saveBoxes(boxes);
+	saveBoxes(boxes.concat(triangles));
 	saveSliders(sliders);
 
 	savedData[dataID] = form;
@@ -209,10 +343,10 @@ function saveData() {
 	        dataType: "xml",
 	        data: form,
 	        success: function(jqXHR, textStatus, errorThrown) {
-	          console.log('Enter on success');
+	          // console.log('Enter on success');
 	        },
 	        error: function(jqXHR, textStatus, errorThrown) {
-	          console.log('Enter on error');
+	          // console.log('Enter on error');
 	        }
 	      });
 	    }

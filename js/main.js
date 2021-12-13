@@ -33,7 +33,7 @@ var svgElements = document.body.querySelectorAll('img');
 
 function take_screenshot() {
     $('#responsive')[0].remove();
-    // viewport_set(true);
+    viewport_set(true);
     
 
     svgElements.forEach(function(item) {
@@ -42,33 +42,24 @@ function take_screenshot() {
 	html2canvas($('#page1')[0], {
       allowTaint: true, 
       useCORS: true,
-      scale: 1,
+      scale: 2,
       width: 1500,
       height: 1714,
     }).then(function(canvas) {
-        // $('#screenshot1')[0].appendChild(canvas);
         $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
     }).then(function() {
       html2canvas($('#page2')[0], {
 	      allowTaint: true, 
 	      useCORS: true,
-	      scale: 1,
+	      scale: 2,
 	      width: 1500,
 	      height: 1714,
 	    }).then(function(canvas) {
-	        // $('#screenshot1')[0].appendChild(canvas);
 	        $("#screenshot2Img").attr("src", canvas.toDataURL("img/jpeg"));
 	    })
 	}).then(function() {
 	    document.head.appendChild(link);
     });
-    // html2canvas($('#page2')[0], {
-    //   allowTaint: true, 
-    //   useCORS: true,
-    // }).then(function(canvas) {
-    //     // $('#screenshot1')[0].appendChild(canvas);
-    //     $("#screenshot2Img").attr("src", canvas.toDataURL("img/png"));
-    // });
     svgElements.forEach(function(item) {
       item.setAttribute("width", '');
     });
@@ -133,13 +124,19 @@ $(document).ready(function(){
   if (idIndex > -1) {
   	var id = href.slice(idIndex+6);
   	// console.log(id);
-  	// setID(id);
+  	setID(id);
   }
+
+  var j = Math.floor(Math.random() * 4); 
 
   var clss = ["color-green", "color-red", "color-blue", "color-yellow"];
 	$('strong').each(function() {
 		i = Math.floor(Math.random() * 4); 
 		this.classList.add(clss[i]);
+	});
+	$('a').each(function() {
+		this.classList.add(clss[j]);
+		j = (j + 1) % 4;
 	});
 
 });
@@ -156,7 +153,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
-	// saveData();
+	saveData();
     take_screenshot();
     modal.style.display = "block";
 }
