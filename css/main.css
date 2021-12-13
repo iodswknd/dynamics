@@ -342,7 +342,7 @@ img {
 
 .slider-box {
     width: 100%;
-    height: 90%;
+    height: 3rem;
     border: 1px solid #1c1c1c;
     border-top: 0;
     border-bottom: 0;
@@ -370,7 +370,7 @@ img {
                          "s s";
     align-items: center;
     font-size: 1.3em;
-    height: 4.5em;
+    height: auto;
 }
 
 #label1 {
