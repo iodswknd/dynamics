@@ -93,6 +93,10 @@ $(document).ready(function(){
           ui.helper.css('top', percT + '%');
         }
       });
+      $(this).click(function(e) {
+      	e.preventDefault();
+      	$(this).insertBefore('#'+this.dataset.dummy);
+      })
   });
 
   $(".slide").each(function(){
@@ -111,6 +115,9 @@ $(document).ready(function(){
           ui.helper.css('top', percT + '%');
         }
       });
+      $(this).click(function() {
+      	$(this).insertBefore('#'+this.dataset.slider);
+      })
   });
 
 

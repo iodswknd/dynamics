@@ -433,7 +433,7 @@ img {
     background: #1c1c1c;
     position: relative;
     z-index: -2;
-    top: .5em;
+    top: .55em;
 }
 
 .footer h1::after {
