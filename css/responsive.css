@@ -8,6 +8,7 @@ html {
 }
 
 .page {
+    min-width: initial;
     min-height: initial;
     padding: 0;
     justify-content: unset;

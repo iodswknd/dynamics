@@ -43,6 +43,8 @@ function take_screenshot() {
       allowTaint: true, 
       useCORS: true,
       scale: 1,
+      width: 1500,
+      height: 1714,
     }).then(function(canvas) {
         // $('#screenshot1')[0].appendChild(canvas);
         $("#screenshot1Img").attr("src", canvas.toDataURL("img/jpeg"));
@@ -51,6 +53,8 @@ function take_screenshot() {
 	      allowTaint: true, 
 	      useCORS: true,
 	      scale: 1,
+	      width: 1500,
+	      height: 1714,
 	    }).then(function(canvas) {
 	        // $('#screenshot1')[0].appendChild(canvas);
 	        $("#screenshot2Img").attr("src", canvas.toDataURL("img/jpeg"));

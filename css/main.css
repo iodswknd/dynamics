@@ -13,15 +13,16 @@
 html {
     font-family: "Montserrat";
     box-sizing: border-box;
-    width: fit-content;
+    width: 100%;
     font-size: 15px;
-    margin: auto;
-    margin-top: 30px;
 }
 
 body {
 	max-width: 1500px;
 	margin: auto;
+    width: fit-content;
+    margin: auto;
+    margin-top: 30px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -53,6 +54,7 @@ h3 {
 	display: flex;
 	flex-direction: column;
     padding: 1.6em 4em;
+    min-width: 1500px;
 	min-height: 1714px;
     justify-content: center;
 }
@@ -144,8 +146,8 @@ img {
 }
 
 .columns-30-33-30 {
-	grid-template-columns: 30% 33% 30%;
-    column-gap: 3.5%;
+	grid-template-columns: 29% 34% 29%;
+    column-gap: 4%;
 }
 
 .grid-2-column {
@@ -531,14 +533,4 @@ img {
 
 #myBtn:hover {
     background-color: #1c1c1c;
-}
-
-@media screen and (max-width: 1280px) {
-    .slider-container, .check-item {
-        font-size: 1.2em;
-    }
-    .cb {
-        height: 1.8rem;
-        width: 1.8rem;
-    }
 }
