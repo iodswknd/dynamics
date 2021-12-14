@@ -373,6 +373,10 @@ img {
     height: auto;
 }
 
+#label1, #label2 {
+    padding-bottom: 1rem;
+}
+
 #label1 {
     text-align:left !important;
     padding-right: 1rem;
